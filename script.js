@@ -1,6 +1,8 @@
-const item = document.querySelector('.item');
+const items = document.querySelectorAll('.item');
 let toggleClass;
 
-item.addEventListener('click', toggleClass = function() {
-    item.classList.toggle('open');
-})
+items.forEach(function(item) {
+    item.addEventListener('click', function(){
+        item.classList.toggle('open');
+    });
+});
